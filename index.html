@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>login</h1>
+    <form onsubmit="login(); return false;">
+    <div><label for="email">Enterm Your Email</label></div>
+    <input type="email" id="email" placeholder="Email" required />
+    <div><label for="password">Enter Your Password</label></div>
+    <input type="password" id="password" placeholder="Password" required />
+    <div><button type="submit">Login</button></div>
+   
+  </div>
+    </form>
+     <div id="message"></div>
+
+  <script>
+    
+    const correctEmail = "user@example.com";
+    const correctPassword = "password123";
+
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const rmessage = document.getElementById("message");
+
+      if (email === correctEmail && password === correctPassword) {
+        message.textContent = "Login Successful.";
+        
+      } else {
+        alert("Enter correct email or password.");
+        message.textContent = "";
+      }
+    }
+  </script>
+</body>
+</html>
